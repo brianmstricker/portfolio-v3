@@ -11,7 +11,7 @@ const images = [
 ];
 const Skills = () => {
   return (
-    <div className="w-full h-screen bg-main" name="skills">
+    <section className="w-full h-screen bg-main" name="skills">
       <div className="flex flex-col items-center pt-32 sm:pt-0 sm:justify-center h-full mx-auto gap-14">
         <h1 className="text-5xl">My Stack</h1>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -21,7 +21,7 @@ const Skills = () => {
               key={`key-${image.name}`}
             >
               <img
-                className="w-[5.5rem] h-[5.5rem] sm:w-40 sm:h-40"
+                className="w-[5.5rem] h-[5.5rem] sm:w-40 sm:h-40 object-contain"
                 src={image.name}
               ></img>
               <p className="text-center text-lg">{image.text}</p>
@@ -29,7 +29,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Skills;

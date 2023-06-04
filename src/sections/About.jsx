@@ -1,13 +1,17 @@
 const About = () => {
   return (
-    <div className="w-full h-screen bg-main" name="about">
+    <section className="w-full h-screen bg-main" name="about">
       <div className="h-full md:h-[85%] flex flex-col items-center justify-center max-w-[1200px] mx-auto gap-16 px-4 md:px-24">
         <div>
           <h1 className="text-5xl">About</h1>
-          <div className="w-36 h-2 bg-red-500 rounded-full" />
+          <div className="w-36 h-2 mt-1 bg-red-500 rounded-full" />
         </div>
         <div className="grid md:grid-cols-2 mt-4 items-center">
-          <p className="text-4xl">Hi, I&apos;m Brian. Nice to meet you.</p>
+          <p className="text-4xl">
+            <span className="bg-slate-950">
+              Hi, I&apos;m Brian. Nice to meet you.
+            </span>
+          </p>
           <p className="inline-block mt-4">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
             quaerat maiores vitae cumque ratione, in reprehenderit enim? Enim
@@ -16,7 +20,7 @@ const About = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default About;
