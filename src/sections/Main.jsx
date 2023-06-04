@@ -5,7 +5,7 @@ const Main = () => {
   return (
     <div className="bg-main w-full h-screen" name="home">
       <div className="flex flex-col md:flex-row mx-auto justify-center max-w-[1200px] h-full px-4 md:px-24 items-center gap-8">
-        <div className="flex flex-col mx-auto justify-center text-center md:text-start items-center md:items-start mt-[-18px]">
+        <div className="flex flex-col mx-auto justify-center text-center sm:text-start items-center md:items-start mt-[-18px]">
           <p className="text-xl md:text-2xl text-gray-300">Hello, I&apos;m</p>
           <h1 className="text-6xl lg:text-8xl ml-[-4.5px]">
             Brian <span className="hidden sm:inline">Stricker</span>

@@ -12,7 +12,7 @@ const Navbar = () => {
           Brian S
         </Link>
       </h1>
-      <ul className="hidden sm:flex text-xl gap-4">
+      <ul className="hidden sm:flex text-xl gap-4 font-bold">
         {links.map((link) => (
           <li
             className="cursor-pointer hover:text-neutral-400"
@@ -31,12 +31,12 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden"
-            : "absolute sm:hidden top-0 left-0 w-full h-screen flex flex-col items-center justify-center text-4xl gap-10 bg-gradient-to-b from-main/95 to-light/95"
+            : "absolute sm:hidden top-0 left-0 w-full h-screen flex flex-col items-center justify-center text-4xl gap-10 bg-main/95"
         }
       >
         {links.map((link) => (
           <li
-            className="cursor-pointer hover:text-neutral-400"
+            className="cursor-pointer hover:text-neutral-400 font-bold"
             key={`link-${link}`}
           >
             <Link

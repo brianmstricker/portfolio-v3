@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import About from "./sections/About";
 import Main from "./sections/Main";
+import Skills from "./sections/Skills";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Main />
       <Sidebar />
       <About />
+      <Skills />
     </>
   );
 }
