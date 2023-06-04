@@ -6,9 +6,9 @@ const links = ["Home", "About", "Skills", "Projects", "Contact"];
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   return (
-    <nav className="bg-main fixed w-full h-24 flex items-center justify-between px-4 sm:px-8 md:px-24">
-      <h1 className="text-5xl font-fancy z-20">
-        <Link to={"home"} smooth duration={500}>
+    <nav className="bg-main fixed w-full h-24 flex items-center justify-between px-4 sm:px-8 md:px-24 z-10">
+      <h1 className="text-5xl font-fancy z-20 cursor-pointer">
+        <Link to={"home"} smooth duration={1000} onClick={() => setNav(false)}>
           Brian S
         </Link>
       </h1>
@@ -18,7 +18,7 @@ const Navbar = () => {
             className="cursor-pointer hover:text-neutral-400"
             key={`link-${link}`}
           >
-            <Link to={link.toLowerCase()} smooth duration={500}>
+            <Link to={link.toLowerCase()} smooth duration={1000}>
               {link}
             </Link>
           </li>
@@ -31,7 +31,7 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden"
-            : "absolute sm:hidden top-0 left-0 w-full h-screen flex flex-col items-center justify-center text-4xl gap-10"
+            : "absolute sm:hidden top-0 left-0 w-full h-screen flex flex-col items-center justify-center text-4xl gap-10 bg-gradient-to-b from-main/95 to-light/95"
         }
       >
         {links.map((link) => (
@@ -39,7 +39,12 @@ const Navbar = () => {
             className="cursor-pointer hover:text-neutral-400"
             key={`link-${link}`}
           >
-            <Link to={link.toLowerCase()} smooth duration={500}>
+            <Link
+              to={link.toLowerCase()}
+              smooth
+              duration={1000}
+              onClick={() => setNav(!nav)}
+            >
               {link}
             </Link>
           </li>

@@ -14,7 +14,7 @@ const links = [
 ];
 const Sidebar = () => {
   return (
-    <div className="hidden sm:fixed left-0 top-[40%] bg-light rounded-tr-2xl rounded-br-2xl pr-3 py-1">
+    <div className="hidden md:block fixed left-0 top-[40%] bg-light rounded-tr-2xl rounded-br-2xl pr-3 py-1">
       {links.map((link) => (
         <a
           className="flex items-center justify-between text-2xl py-2 w-[200px] ml-[-145px] hover:ml-0 pl-2 duration-500"

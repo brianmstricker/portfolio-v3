@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import About from "./sections/About";
 import Main from "./sections/Main";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Main />
       <Sidebar />
+      <About />
     </>
   );
 }

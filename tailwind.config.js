@@ -9,7 +9,7 @@ export default {
       },
       colors: {
         main: "#070A2E",
-        light: "#161938",
+        light: "#3E3F53",
       },
     },
   },
