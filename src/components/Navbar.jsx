@@ -6,7 +6,7 @@ const links = ["Home", "About", "Skills", "Projects", "Contact"];
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   return (
-    <nav className="bg-main/95 fixed w-full h-24 flex items-center justify-between px-4 sm:px-8 md:px-24 z-10">
+    <nav className="fixed w-full h-24 flex items-center justify-between px-4 sm:px-8 md:px-24 z-10 top-0 bg-main/95">
       <h1 className="text-5xl font-fancy z-20 cursor-pointer">
         <Link to={"home"} smooth duration={1000} onClick={() => setNav(false)}>
           Brian S

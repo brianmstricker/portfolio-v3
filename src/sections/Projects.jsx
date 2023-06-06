@@ -1,5 +1,6 @@
 import icongen from "../assets/images/icon-generator.png";
 import { RiExternalLinkFill, RiGithubFill } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 const images = [
   {
@@ -28,7 +29,13 @@ const images = [
 const Projects = () => {
   return (
     <section className="w-full bg-main" name="projects">
-      <div className="flex flex-col items-center justify-center gap-6 px-4 md:px-20 h-full w-full mx-auto max-w-[1200px] pt-32 py-10 sm:py-36">
+      <motion.div
+        className="flex flex-col items-center justify-center gap-6 px-4 md:px-20 h-full w-full mx-auto max-w-[1200px] pt-32 py-10 sm:py-36"
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ ease: "easeIn", duration: 1.5 }}
+        viewport={{ once: true }}
+      >
         <div>
           <h1 className="text-6xl">Projects</h1>
           <div className="w-60 h-2 mt-1 bg-red-500 rounded-full" />
@@ -79,7 +86,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
