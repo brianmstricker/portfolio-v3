@@ -18,13 +18,7 @@ const images = [
 const Skills = () => {
  return (
   <section className="w-full h-screen bg-main" name="skills">
-   <motion.div
-    className="flex flex-col items-center pt-28 sm:pt-0 sm:justify-center h-full mx-auto gap-6"
-    initial={{ opacity: 0, scale: 0.5 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ ease: "easeIn", duration: 1.5 }}
-    viewport={{ once: true }}
-   >
+   <div className="flex flex-col items-center pt-28 sm:pt-0 sm:justify-center h-full mx-auto gap-6">
     <div>
      <h1 className="text-5xl">Skills</h1>
      <div className="w-32 h-2 mt-1 bg-red-500 rounded-full" />
@@ -37,6 +31,10 @@ const Skills = () => {
        drag
        dragElastic={0.7}
        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+       initial={{ opacity: 0, scale: 0.5 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+       transition={{ ease: "easeIn", duration: 1.5 }}
+       viewport={{ once: true }}
       >
        <img
         className="w-[5.5rem] h-[5.5rem] md:w-32 md:h-32 object-contain mx-auto"
@@ -48,7 +46,7 @@ const Skills = () => {
       </motion.div>
      ))}
     </div>
-   </motion.div>
+   </div>
   </section>
  );
 };

@@ -1,7 +1,6 @@
 import icongen from "../assets/images/icon-generator.png";
 import blogimg from "../assets/images/myblog.png";
 import { RiExternalLinkFill, RiGithubFill } from "react-icons/ri";
-import { motion } from "framer-motion";
 
 const images = [
  {
@@ -32,13 +31,7 @@ const images = [
 const Projects = () => {
  return (
   <section className="w-full bg-main" name="projects">
-   <motion.div
-    className="flex flex-col items-center justify-center gap-6 px-4 md:px-20 h-full w-full mx-auto max-w-[1200px] pt-24 sm:pt-32 py-10 sm:py-36"
-    initial={{ opacity: 0, scale: 0.5 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ ease: "easeIn", duration: 1.5 }}
-    viewport={{ once: true }}
-   >
+   <div className="flex flex-col items-center justify-center gap-6 px-4 md:px-20 h-full w-full mx-auto max-w-[1200px] pt-24 sm:pt-32 py-10 sm:py-36">
     <div>
      <h1 className="text-6xl">Projects</h1>
      <div className="w-60 h-2 mt-1 bg-red-500 rounded-full" />
@@ -59,7 +52,7 @@ const Projects = () => {
           <div className="flex gap-4 text-base">
            <div>
             <a
-             className="flex gap-1 cursor-pointer items-center"
+             className="flex gap-1 cursor-pointer items-center hover:underline"
              href={image.site}
              target="_blank"
              rel="noreferrer"
@@ -70,7 +63,7 @@ const Projects = () => {
            </div>
            <div>
             <a
-             className="flex gap-1 cursor-pointer items-center"
+             className="flex gap-1 cursor-pointer items-center hover:underline"
              href={image.code}
              target="_blank"
              rel="noreferrer"
@@ -86,7 +79,7 @@ const Projects = () => {
       </div>
      ))}
     </div>
-   </motion.div>
+   </div>
   </section>
  );
 };

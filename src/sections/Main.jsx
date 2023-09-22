@@ -10,7 +10,7 @@ const Main = () => {
     className="flex flex-col md:flex-row mx-auto justify-center max-w-[1200px] h-full px-4 md:px-24 items-center gap-8 mt-0 relative"
     initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
-    transition={{ ease: "easeIn", duration: 2.5 }}
+    transition={{ duration: 1.5 }}
    >
     <div className="flex flex-col mx-auto mt-[-18px] items-center text-center md:items-start md:text-start">
      <p className="text-xl md:text-2xl text-gray-300">Hello, I&apos;m</p>
