@@ -2,42 +2,54 @@ import HTML from "../assets/images/HTML.svg";
 import REACT from "../assets/images/React.svg";
 import JAVASCRIPT from "../assets/images/Javascript.svg";
 import CSS from "../assets/images/CSS.svg";
+import TAILWIND from "../assets/images/tailwind.png";
+import TYPESCRIPT from "../assets/images/typescript.png";
 import { motion } from "framer-motion";
 
 const images = [
-  { name: HTML, style: "shadow-orange-500", text: "HTML" },
-  { name: CSS, style: "shadow-blue-600", text: "CSS" },
-  { name: JAVASCRIPT, style: "shadow-yellow-400", text: "Javascript" },
-  { name: REACT, style: "shadow-cyan-400", text: "React" },
-  { name: REACT, style: "shadow-cyan-400", text: "React Native" },
+ { name: HTML, style: "shadow-orange-500", text: "HTML" },
+ { name: CSS, style: "shadow-blue-600", text: "CSS" },
+ { name: JAVASCRIPT, style: "shadow-yellow-400", text: "Javascript" },
+ { name: REACT, style: "shadow-cyan-400", text: "React" },
+ { name: REACT, style: "shadow-cyan-400", text: "React Native" },
+ { name: TAILWIND, style: "shadow-blue-400", text: "TailwindCSS" },
+ { name: TYPESCRIPT, style: "shadow-blue-400", text: "Typescript" },
 ];
 const Skills = () => {
-  return (
-    <section className="w-full h-screen bg-main" name="skills">
+ return (
+  <section className="w-full h-screen bg-main" name="skills">
+   <motion.div
+    className="flex flex-col items-center pt-28 sm:pt-0 sm:justify-center h-full mx-auto gap-6"
+    initial={{ opacity: 0, scale: 0.5 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ ease: "easeIn", duration: 1.5 }}
+    viewport={{ once: true }}
+   >
+    <div>
+     <h1 className="text-5xl">Skills</h1>
+     <div className="w-32 h-2 mt-1 bg-red-500 rounded-full" />
+    </div>
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+     {images.map((image) => (
       <motion.div
-        className="flex flex-col items-center pt-32 sm:pt-0 sm:justify-center h-full mx-auto gap-14"
-        initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ ease: "easeIn", duration: 1.5 }}
-        viewport={{ once: true }}
+       className={`bg-main px-4 pt-3 pb-[3px] flex flex-col gap-2 rounded-2xl shadow-md ${image.style}`}
+       key={`key-${image.text}`}
+       drag
+       dragElastic={0.7}
+       dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
       >
-        <h1 className="text-5xl">My Stack</h1>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {images.map((image) => (
-            <div
-              className={`bg-main px-4 pt-3 pb-[3px] flex flex-col gap-2 rounded-2xl shadow-md ${image.style}`}
-              key={`key-${image.text}`}
-            >
-              <img
-                className="w-[5.5rem] h-[5.5rem] md:w-40 md:h-40 object-contain"
-                src={image.name}
-              ></img>
-              <p className="text-center text-lg">{image.text}</p>
-            </div>
-          ))}
-        </div>
+       <img
+        className="w-[5.5rem] h-[5.5rem] md:w-32 md:h-32 object-contain mx-auto"
+        src={image.name}
+        loading="lazy"
+        draggable="false"
+       ></img>
+       <p className="text-center text-lg">{image.text}</p>
       </motion.div>
-    </section>
-  );
+     ))}
+    </div>
+   </motion.div>
+  </section>
+ );
 };
 export default Skills;
