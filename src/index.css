@@ -5,8 +5,13 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply font-regular;
-    @apply text-neutral-200;
-  }
+ body {
+  @apply font-regular;
+  @apply text-neutral-100;
+ }
+}
+
+.custom-autofill-class {
+ -webkit-transition-delay: 9999s;
+ transition-delay: 9999s;
 }

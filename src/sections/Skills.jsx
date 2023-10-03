@@ -23,7 +23,7 @@ const Skills = () => {
      <h1 className="text-5xl">Skills</h1>
      <div className="w-32 h-2 mt-1 bg-red-500 rounded-full" />
     </div>
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
      {images.map((image) => (
       <motion.div
        className={`bg-main px-4 pt-3 pb-[3px] flex flex-col gap-2 rounded-2xl shadow-md ${image.style}`}
@@ -37,7 +37,7 @@ const Skills = () => {
        viewport={{ once: true }}
       >
        <img
-        className="w-[5.5rem] h-[5.5rem] md:w-32 md:h-32 object-contain mx-auto"
+        className="w-[5.5rem] h-[5.5rem] lg:w-32 lg:h-32 object-contain mx-auto"
         src={image.name}
         loading="lazy"
         draggable="false"

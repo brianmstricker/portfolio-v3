@@ -19,7 +19,7 @@ function App() {
    <Navbar />
    <motion.div
     style={{ scaleX }}
-    className="fixed top-[10%] left-0 right-0 h-3 bg-sky-600 origin-[0%] z-[100]"
+    className="fixed top-[10%] left-0 right-0 h-3 bg-sky-500 origin-[0%] z-[100]"
    />
    <Main />
    <Sidebar />

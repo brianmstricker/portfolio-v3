@@ -13,21 +13,21 @@ const Main = () => {
     transition={{ duration: 1.5 }}
    >
     <div className="flex flex-col mx-auto mt-[-18px] items-center text-center md:items-start md:text-start">
-     <p className="text-xl md:text-2xl text-gray-300">Hello, I&apos;m</p>
-     <h1 className="text-6xl sm:text-7xl lg:text-8xl relative left-[-6px] bg-gradient-to-br from-blue-300 via-blue-600 to-blue-600 text-transparent bg-clip-text">
+     <p className="text-xl md:text-2xl text-gray-200">Hello, I&apos;m</p>
+     <h1 className="text-6xl sm:text-7xl lg:text-8xl relative left-[-6px] bg-gradient-to-br from-sky-300 via-sky-500 to-sky-600 text-transparent bg-clip-text">
       Brian{" "}
       <span className="inline">
        <br />
        Stricker
       </span>
      </h1>
-     <p className="text-3xl text-gray-300">Aspiring Full Stack Developer.</p>
+     <p className="text-3xl text-gray-200">Aspiring Full Stack Developer.</p>
      <motion.div
       whileHover={{ scale: 1.1 }}
       transition={{ type: "spring", stiffness: 500, damping: 10 }}
      >
       <Link
-       className="bg-sky-600 px-6 py-4 rounded-2xl flex items-center gap-3 cursor-pointer w-fit relative -bottom-12"
+       className="bg-sky-500 px-6 py-4 rounded-2xl flex items-center gap-3 cursor-pointer w-fit relative -bottom-12"
        to="projects"
        smooth
        duration={1000}
@@ -37,11 +37,13 @@ const Main = () => {
       </Link>
      </motion.div>
     </div>
-    <img
-     className="object-contain hidden md:block md:w-[400px] md:h-[400px] mt-10 md:mt-0"
-     src={me}
-     alt="me"
-    />
+    <div className="hidden md:block shrink-0">
+     <img
+      className="object-contain w-full md:h-[400px] mt-10 md:mt-0"
+      src={me}
+      alt="me"
+     />
+    </div>
    </motion.div>
   </section>
  );
