@@ -10,7 +10,10 @@ const InputWithLabel = ({
   <div className="flex flex-col gap-1 group">
    <label
     htmlFor={name}
-    className="relative -bottom-8 group-focus-within:-bottom-0 transition-all duration-300"
+    className={
+     "relative group-focus-within:-bottom-0 transition-all duration-300" +
+     (value !== "" ? " -bottom-0" : " -bottom-8")
+    }
    >
     {text}
    </label>
@@ -23,7 +26,7 @@ const InputWithLabel = ({
      onChange={onChange}
      placeholder={text}
      required={required}
-     className="bg-main rounded-md py-1.5 px-4 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-sky-500 placeholder:text-gray-400 z-10 !outline-none custom-autofill-class"
+     className="bg-main rounded-md py-1.5 px-4 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-sky-500 placeholder:text-gray-400 z-10 !outline-none"
     />
    ) : (
     <textarea

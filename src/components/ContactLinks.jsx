@@ -1,5 +1,5 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { IoMailOutline } from "react-icons/io5";
+import { ImMail } from "react-icons/im";
 
 const links = [
  {
@@ -14,15 +14,15 @@ const links = [
  },
  {
   name: "Email",
-  icon: <IoMailOutline />,
+  icon: <ImMail />,
   link: "mailto:brianmstricker@gmail.com",
  },
 ];
 
-export const ContactLinks = ({ contactPage }) => {
+export const ContactLinks = ({ icons, small }) => {
  return (
   <div>
-   {!contactPage ? (
+   {!icons ? (
     <div>
      {links.map((link) => (
       <a
@@ -40,13 +40,19 @@ export const ContactLinks = ({ contactPage }) => {
     <div className="flex gap-5 sm:gap-12 items-center">
      {links.map((link) => (
       <a
-       className="text-3xl last:text-4xl hover:scale-110 duration-200"
+       className={
+        "hover:scale-110 duration-200 relative flex items-center justify-center group" +
+        (small ? " text-xl" : " text-4xl")
+       }
        href={link.link}
        key={`link-${link.name}`}
        target="_blank"
        rel="noreferrer"
       >
-       {link.icon}
+       <span className="text-xs absolute -top-4 opacity-0 group-hover:opacity-100 duration-300">
+        {link.name}
+       </span>
+       <span>{link.icon}</span>
       </a>
      ))}
     </div>

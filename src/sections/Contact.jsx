@@ -60,7 +60,7 @@ const Contact = () => {
      <div className="w-36 sm:w-48 h-2 mt-1 bg-red-500 rounded-full" />
     </div>
     <div>
-     <ContactLinks contactPage={true} />
+     <ContactLinks icons={true} />
     </div>
     <form
      className="flex flex-col gap-4 w-full max-w-md"
