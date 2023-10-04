@@ -1,5 +1,6 @@
 import icongen from "../assets/images/icon-generator.png";
 import blogimg from "../assets/images/myblog.png";
+import airbnbclone from "../assets/images/airbnb-clone.png";
 import { RiExternalLinkFill, RiGithubFill } from "react-icons/ri";
 
 const images = [
@@ -11,21 +12,16 @@ const images = [
   code: "https://github.com/brianmstricker/blog-app",
  },
  {
+  name: "Airbnb Clone",
+  image: airbnbclone,
+  text: "React, Next.js, Tailwind, Prisma, Typescript",
+ },
+ {
   name: "Icon Generator",
   image: icongen,
   text: "React, T3 Stack(Typescript, Prisma, TRPC)",
   site: "https://icons.brianstricker.com/",
   code: "https://github.com/brianmstricker/icon-generator",
- },
- {
-  name: "Icon Generator2",
-  image: icongen,
-  text: "React, T3 Stack(Typescript, Prisma, TRPC)",
- },
- {
-  name: "Icon Generator3",
-  image: icongen,
-  text: "React, T3 Stack(Typescript, Prisma, TRPC)",
  },
 ];
 const Projects = () => {
@@ -49,30 +45,34 @@ const Projects = () => {
          <div className="flex flex-col justify-between text-lg sm:text-lg lg:text-2xl text-center h-full items-center p-3">
           <h3>This was built using:</h3>
           <p className="text-red-300">{image.text}</p>
-          <div className="flex gap-4 text-base">
-           <div>
-            <a
-             className="flex gap-1 cursor-pointer items-center hover:underline"
-             href={image.site}
-             target="_blank"
-             rel="noreferrer"
-            >
-             <p>View site</p>
-             <RiExternalLinkFill size={28} />
-            </a>
+          {image.site && image.code ? (
+           <div className="flex gap-4 text-base">
+            <div>
+             <a
+              className="flex gap-1 cursor-pointer items-center hover:underline"
+              href={image.site}
+              target="_blank"
+              rel="noreferrer"
+             >
+              <p>View site</p>
+              <RiExternalLinkFill size={28} />
+             </a>
+            </div>
+            <div>
+             <a
+              className="flex gap-1 cursor-pointer items-center hover:underline"
+              href={image.code}
+              target="_blank"
+              rel="noreferrer"
+             >
+              View code
+              <RiGithubFill size={28} />
+             </a>
+            </div>
            </div>
-           <div>
-            <a
-             className="flex gap-1 cursor-pointer items-center hover:underline"
-             href={image.code}
-             target="_blank"
-             rel="noreferrer"
-            >
-             View code
-             <RiGithubFill size={28} />
-            </a>
-           </div>
-          </div>
+          ) : (
+           <div className="text-sm">Work In Progress</div>
+          )}
          </div>
         </div>
        </div>

@@ -1,4 +1,5 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { IoMailOutline } from "react-icons/io5";
 
 const links = [
  {
@@ -10,6 +11,11 @@ const links = [
   name: "LinkedIn",
   icon: <BsLinkedin size={35} />,
   link: "https://www.linkedin.com/in/brian-stricker-a1559b250/",
+ },
+ {
+  name: "Email",
+  icon: <IoMailOutline size={35} />,
+  link: "mailto:brianmstricker@gmail.com",
  },
 ];
 const Sidebar = () => {
