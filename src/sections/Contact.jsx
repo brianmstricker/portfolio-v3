@@ -23,7 +23,6 @@ const Contact = () => {
  }
  function getToken() {
   const token = document.querySelector("#captchaResponse").value;
-  console.log(token);
   if (token === "") return setTimeout(getToken, 2000);
   if (token) setForm({ ...form, "g-recaptcha-response": token });
  }
