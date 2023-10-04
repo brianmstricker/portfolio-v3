@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import InputWithLabel from "../components/InputWithLabel";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ClipLoader } from "react-spinners";
+import { ContactLinks } from "../components/ContactLinks";
 
 const Contact = () => {
  const [loading, setLoading] = useState(false);
@@ -9,6 +10,7 @@ const Contact = () => {
   name: "",
   email: "",
   message: "",
+  "g-recaptcha-response": "",
  });
  const handleChange = (e) => {
   setForm({ ...form, [e.target.name]: e.target.value });
@@ -17,8 +19,18 @@ const Contact = () => {
   return !form.name || !form.email || !form.message || loading;
  }
  function clearForm() {
-  setForm({ name: "", email: "", message: "" });
+  setForm({ name: "", email: "", message: "", "g-recaptcha-response": "" });
  }
+ function getToken() {
+  const token = document.querySelector("#captchaResponse").value;
+  console.log(token);
+  if (token === "") return setTimeout(getToken, 2000);
+  if (token) setForm({ ...form, "g-recaptcha-response": token });
+ }
+ useEffect(() => {
+  getToken();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+ }, []);
  async function handleSubmit(e) {
   e.preventDefault();
   try {
@@ -38,15 +50,18 @@ const Contact = () => {
  return (
   <section className="bg-main w-full h-screen" name="contact">
    <motion.div
-    className="h-full flex flex-col items-center justify-center max-w-[1200px] mx-auto gap-16 px-4 md:px-24"
+    className="h-full flex flex-col items-center justify-center max-w-[1200px] mx-auto gap-8 px-4 md:px-24 pt-20"
     initial={{ opacity: 0, scale: 0.5 }}
     whileInView={{ opacity: 1, scale: 1 }}
     transition={{ ease: "anticipate", duration: 1.5 }}
     viewport={{ once: true }}
    >
     <div>
-     <h1 className="text-5xl">Contact</h1>
-     <div className="w-48 h-2 mt-1 bg-red-500 rounded-full" />
+     <h2 className="text-4xl sm:text-5xl">Contact</h2>
+     <div className="w-36 sm:w-48 h-2 mt-1 bg-red-500 rounded-full" />
+    </div>
+    <div>
+     <ContactLinks contactPage={true} />
     </div>
     <form
      className="flex flex-col gap-4 w-full max-w-md"
@@ -74,6 +89,18 @@ const Contact = () => {
       value={form.message}
       onChange={handleChange}
      />
+     <input type="hidden" id="captchaResponse" name="g-recaptcha-response" />
+     <div className="text-xs text-gray-400 w-[80%] mx-auto">
+      This site is protected by reCAPTCHA and the Google{" "}
+      <a className="underline" href="https://policies.google.com/privacy">
+       Privacy Policy
+      </a>{" "}
+      and{" "}
+      <a className="underline" href="https://policies.google.com/terms">
+       Terms of Service
+      </a>{" "}
+      apply.
+     </div>
      <button
       type="submit"
       className={

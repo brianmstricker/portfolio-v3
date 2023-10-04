@@ -5,23 +5,14 @@ const About = () => {
   <section className="w-full h-screen bg-main" name="about">
    <div className="h-full flex flex-col items-center justify-center max-w-[1200px] mx-auto gap-16 px-4 md:px-24">
     <div>
-     <h1 className="text-5xl">About</h1>
-     <div className="w-36 h-2 mt-1 bg-red-500 rounded-full" />
+     <h2 className="text-4xl sm:text-5xl">About</h2>
+     <div className="w-28 sm:w-36 h-2 mt-1 bg-red-500 rounded-full" />
     </div>
-    <div className="grid lg:grid-cols-2 mt-4 items-center">
+    <div className="flex mt-4 items-center">
      <motion.p
-      className="text-4xl self-start mt-4 lg:self-auto"
-      initial={{ opacity: 0, scale: 0.3, x: -200 }}
-      whileInView={{ opacity: 1, scale: 1, x: 0 }}
-      transition={{ ease: "circIn", duration: 1.5 }}
-      viewport={{ once: true }}
-     >
-      I&apos;m Brian. Nice to meet you.
-     </motion.p>
-     <motion.p
-      className="inline-block mt-8 lg:mt-4"
-      initial={{ opacity: 0, scale: 0.3, x: 200 }}
-      whileInView={{ opacity: 1, scale: 1, x: 0 }}
+      className="inline-block mt-8 lg:mt-4 w-full sm:w-[75%] mx-auto"
+      initial={{ opacity: 0, scale: 0.2, y: 200 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ ease: "circIn", duration: 1.5 }}
       viewport={{ once: true }}
      >

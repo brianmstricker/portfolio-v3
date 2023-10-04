@@ -11,6 +11,11 @@
  }
 }
 
+.grecaptcha-badge {
+ visibility: hidden;
+ opacity: 0;
+}
+
 .custom-autofill-class {
  -webkit-transition-delay: 9999s;
  transition-delay: 9999s;

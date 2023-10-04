@@ -27,10 +27,10 @@ const images = [
 const Projects = () => {
  return (
   <section className="w-full bg-main" name="projects">
-   <div className="flex flex-col items-center justify-center gap-6 px-4 md:px-20 h-full w-full mx-auto max-w-[1200px] pt-24 sm:pt-32 py-10 sm:py-36">
+   <div className="flex flex-col items-center justify-center gap-6 px-4 md:px-20 h-full w-full mx-auto max-w-[1200px] pt-28 sm:pt-32 py-10 sm:py-36">
     <div>
-     <h1 className="text-6xl">Projects</h1>
-     <div className="w-60 h-2 mt-1 bg-red-500 rounded-full" />
+     <h2 className="text-4xl sm:text-5xl">Projects</h2>
+     <div className="w-36 sm:w-48 h-2 mt-1 bg-red-500 rounded-full" />
     </div>
     <div className="grid sm:grid-cols-2 gap-4 justify-center items-center">
      {images.map((image) => (

@@ -20,10 +20,10 @@ const Skills = () => {
   <section className="w-full h-screen bg-main" name="skills">
    <div className="flex flex-col items-center pt-28 sm:pt-0 sm:justify-center h-full mx-auto gap-6">
     <div>
-     <h1 className="text-5xl">Skills</h1>
-     <div className="w-32 h-2 mt-1 bg-red-500 rounded-full" />
+     <h2 className="text-4xl sm:text-5xl">Skills</h2>
+     <div className="w-24 sm:w-32 h-2 mt-1 bg-red-500 rounded-full" />
     </div>
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 px-2">
      {images.map((image) => (
       <motion.div
        className={`bg-main px-4 pt-3 pb-[3px] flex flex-col gap-2 rounded-2xl shadow-md ${image.style}`}
@@ -42,7 +42,7 @@ const Skills = () => {
         loading="lazy"
         draggable="false"
        ></img>
-       <p className="text-center text-lg">{image.text}</p>
+       <p className="text-center text-sm sm:text-lg">{image.text}</p>
       </motion.div>
      ))}
     </div>
