@@ -46,9 +46,12 @@ const Navbar = () => {
     {nav ? <CgCloseO size={48} /> : <CgMenuRound size={48} />}
    </motion.div>
    <motion.ul
-    className="absolute sm:hidden top-0 left-0 w-full h-screen flex flex-col items-center justify-center text-4xl gap-10 bg-main/95"
+    className={
+     "absolute sm:hidden top-0 left-0 w-full h-screen flex flex-col items-center justify-center text-4xl gap-10 bg-main/95"
+    }
     animate={nav ? "open" : "closed"}
     variants={variants}
+    initial="closed"
    >
     {links.map((link) => (
      <li

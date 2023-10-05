@@ -47,9 +47,9 @@ const Contact = () => {
   }
  }
  return (
-  <section className="bg-main w-full h-screen" name="contact">
+  <section className="bg-main w-full min-h-screen pb-4" name="contact">
    <motion.div
-    className="h-full flex flex-col items-center justify-center max-w-[1200px] mx-auto gap-8 px-4 md:px-24 pt-20"
+    className="h-full flex flex-col items-center justify-center max-w-[1200px] mx-auto gap-6 px-4 md:px-24 pt-20"
     initial={{ opacity: 0, scale: 0.5 }}
     whileInView={{ opacity: 1, scale: 1 }}
     transition={{ ease: "anticipate", duration: 1.5 }}
@@ -63,7 +63,7 @@ const Contact = () => {
      <ContactLinks icons={true} />
     </div>
     <form
-     className="flex flex-col gap-4 w-full max-w-md"
+     className="flex flex-col gap-2 sm:gap-4 w-full max-w-md"
      onSubmit={handleSubmit}
     >
      <InputWithLabel

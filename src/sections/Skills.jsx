@@ -37,7 +37,7 @@ const Skills = () => {
        viewport={{ once: true }}
       >
        <img
-        className="w-[5.5rem] h-[5.5rem] lg:w-32 lg:h-32 object-contain mx-auto"
+        className="w-[5.5rem] h-[3rem] sm:w-16 sm:h-16 lg:w-32 lg:h-32 object-contain mx-auto"
         src={image.name}
         loading="lazy"
         draggable="false"
