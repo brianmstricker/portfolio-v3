@@ -5,16 +5,18 @@ import { RiExternalLinkFill, RiGithubFill } from "react-icons/ri";
 
 const images = [
  {
+  name: "Airbnb Clone",
+  image: airbnbclone,
+  text: "React, Next.js, Tailwind, Prisma, Typescript",
+  site: "https://brian-airbnb-clone.vercel.app//",
+  code: "https://github.com/brianmstricker/airbnb-clone",
+ },
+ {
   name: "Fullstack Blog",
   image: blogimg,
   text: "MERN stack(MongoDB, Express, React, Node)",
   site: "https://blog.brianstricker.com/",
   code: "https://github.com/brianmstricker/blog-app",
- },
- {
-  name: "Airbnb Clone",
-  image: airbnbclone,
-  text: "React, Next.js, Tailwind, Prisma, Typescript",
  },
  {
   name: "Icon Generator",
