@@ -11,7 +11,7 @@ const Main = () => {
     className="flex flex-col mx-auto justify-center max-w-[1200px] h-full px-4 md:px-24 items-center gap-8 mt-0 relative"
     initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 1.5 }}
+    transition={{ duration: 0.5 }}
    >
     <div className="flex flex-col items-center gap-8">
      <div className="rounded-full h-52 w-52 flex items-center justify-center overflow-hidden hover:scale-105 duration-300">

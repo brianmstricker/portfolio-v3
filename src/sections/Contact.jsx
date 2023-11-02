@@ -55,7 +55,7 @@ const Contact = () => {
     className="h-full flex flex-col items-center justify-center max-w-[1200px] mx-auto gap-6 px-4 md:px-24 pt-20"
     initial={{ opacity: 0, scale: 0.5 }}
     whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ ease: "anticipate", duration: 1.5 }}
+    transition={{ ease: "anticipate", duration: 1.25 }}
     viewport={{ once: true }}
    >
     <div>

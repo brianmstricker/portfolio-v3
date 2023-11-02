@@ -13,7 +13,7 @@ const About = () => {
       className="inline-block mt-8 lg:mt-4 w-full sm:w-[75%] mx-auto"
       initial={{ opacity: 0, scale: 0.2, y: 200 }}
       whileInView={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ ease: "circIn", duration: 1.5 }}
+      transition={{ ease: "circIn", duration: 1 }}
       viewport={{ once: true }}
      >
       My name is Brian Stricker, and I&apos;m an aspiring fullstack web
