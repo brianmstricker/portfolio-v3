@@ -1,4 +1,4 @@
-import icongen from "../assets/images/icon-generator.png";
+import icongen from "../assets/images/icon-generator-project.png";
 import blogimg from "../assets/images/myblog.png";
 import airbnbclone from "../assets/images/airbnb-clone.png";
 import { RiExternalLinkFill, RiGithubFill } from "react-icons/ri";
