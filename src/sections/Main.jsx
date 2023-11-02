@@ -1,4 +1,4 @@
-import me from "../assets/images/me.jpg";
+import me from "../assets/images/me-small.jpg";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
@@ -19,7 +19,6 @@ const Main = () => {
        className="object-cover w-full h-full"
        src={me}
        alt="A photo of myself"
-       sizes="(max-width: 710px) 120px"
       />
      </div>
      <div className="flex flex-col items-center">

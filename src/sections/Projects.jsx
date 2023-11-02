@@ -43,6 +43,7 @@ const Projects = () => {
          className="w-full h-full lg:w-[40rem] lg:h-[14rem] xlgg:w-[44rem] xlg:h-[16rem] object-contain"
          src={image.image}
          alt={image.name}
+         loading="lazy"
         />
         <div className="absolute top-0 left-0 right-0 bottom-0 opacity-0 hover:opacity-100 hover:bg-black/90 transition-all duration-500">
          <div className="flex flex-col justify-between text-lg sm:text-lg lg:text-2xl text-center h-full items-center p-3">
