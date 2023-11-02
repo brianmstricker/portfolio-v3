@@ -39,6 +39,7 @@ const Skills = () => {
        <img
         className="w-[5.5rem] h-[3rem] sm:w-16 sm:h-16 lg:w-32 lg:h-32 object-contain mx-auto"
         src={image.name}
+        alt={image.text}
         loading="lazy"
         draggable="false"
        ></img>

@@ -15,7 +15,12 @@ const Main = () => {
    >
     <div className="flex flex-col items-center gap-8">
      <div className="rounded-full h-52 w-52 flex items-center justify-center overflow-hidden hover:scale-105 duration-300">
-      <img className="object-cover w-full h-full" src={me} alt="me" />
+      <img
+       className="object-cover w-full h-full"
+       src={me}
+       alt="A photo of myself"
+       sizes="(max-width: 710px) 120px"
+      />
      </div>
      <div className="flex flex-col items-center">
       <TypewriterComponent />
