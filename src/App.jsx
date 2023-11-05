@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import Footer from "./components/Footer";
+import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import About from "./sections/About";
@@ -9,14 +11,19 @@ import Skills from "./sections/Skills";
 import { useScroll, motion, useSpring } from "framer-motion";
 
 function App() {
+ const [loading, setLoading] = useState(true);
  const { scrollYProgress } = useScroll();
  const scaleX = useSpring(scrollYProgress, {
   stiffness: 100,
   damping: 30,
   restDelta: 0.001,
  });
+ useEffect(() => {
+  setLoading(false);
+ }, []);
  return (
   <>
+   {loading && <Loader />}
    <Navbar />
    <motion.div
     style={{ scaleX }}
