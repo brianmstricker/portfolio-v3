@@ -6,9 +6,7 @@
 
 @layer base {
  body {
-  @apply font-regular;
-  @apply text-neutral-100;
-  @apply bg-main;
+  @apply font-regular text-neutral-100 bg-main;
  }
 }
 
