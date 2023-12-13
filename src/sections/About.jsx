@@ -16,13 +16,13 @@ const About = () => {
       transition={{ ease: "circIn", duration: 1 }}
       viewport={{ once: true }}
      >
-      My name is Brian Stricker, and I&apos;m an aspiring fullstack web
-      developer. I primarily focus on using the MERN stack, but I&apos;ve
-      dabbled with several other frameworks and languages, and I&apos;m never
-      writing anything off. My coding journey started a few years ago, but it
-      really took off when I started Nucamp (coding bootcamp), in which I
-      completed the full stack web and mobile development course, as well as the
-      backend course which included python and an intro to devops.
+      My name is Brian Stricker, and I&apos;m a fullstack web developer. I
+      primarily focus on using the MERN stack, but I&apos;ve dabbled with
+      several other frameworks and languages, and I&apos;m never writing
+      anything off. My coding journey started a few years ago, but it really
+      took off when I started Nucamp (coding bootcamp), in which I completed the
+      full stack web and mobile development course, as well as the backend
+      course which included python and an intro to devops.
      </motion.p>
     </div>
    </div>

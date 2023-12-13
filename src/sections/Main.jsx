@@ -23,9 +23,7 @@ const Main = () => {
      </div>
      <div className="flex flex-col items-center">
       <TypewriterComponent />
-      <p className="text-lg sm:text-3xl text-gray-200">
-       Aspiring Full Stack Developer.
-      </p>
+      <p className="text-lg sm:text-3xl text-gray-200">Full Stack Developer.</p>
       <motion.div
        whileHover={{ scale: 1.1 }}
        transition={{
