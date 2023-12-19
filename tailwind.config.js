@@ -3,9 +3,6 @@ export default {
  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
  theme: {
   extend: {
-   fontFamily: {
-    fancy: ["Dancing Script", "cursive"],
-   },
    colors: {
     main: "#262626",
    },

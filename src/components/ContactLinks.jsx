@@ -19,7 +19,7 @@ const links = [
  },
 ];
 
-export const ContactLinks = ({ icons, small }) => {
+export const ContactLinks = ({ icons, small, index }) => {
  return (
   <div>
    {!icons ? (
@@ -37,12 +37,16 @@ export const ContactLinks = ({ icons, small }) => {
      ))}
     </div>
    ) : (
-    <div className="flex gap-5 sm:gap-12 items-center">
+    <div
+     className={
+      "flex gap-5 items-center" + (index ? " sm:gap-6" : " sm:gap-12")
+     }
+    >
      {links.map((link) => (
       <a
        className={
         "hover:scale-110 duration-200 relative flex items-center justify-center group" +
-        (small ? " text-xl" : " text-4xl")
+        (small ? " text-xl" : " text-3xl")
        }
        href={link.link}
        key={`link-${link.name}`}

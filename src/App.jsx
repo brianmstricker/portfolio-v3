@@ -1,4 +1,5 @@
 import "@fontsource/poppins";
+import "@fontsource-variable/dancing-script";
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
 import Main from "./sections/Main";

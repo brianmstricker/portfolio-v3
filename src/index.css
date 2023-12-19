@@ -7,6 +7,9 @@
   font-family: "Poppins", sans-serif;
   @apply text-neutral-100 bg-neutral-800;
  }
+ .fancy {
+  font-family: "Dancing Script Variable", sans-serif;
+ }
 }
 
 .grecaptcha-badge {

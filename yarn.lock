@@ -744,6 +744,11 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.10.3.tgz#c894a21e8c911830e36bbbba55903ccfbc7a7e25"
   integrity sha512-+ZplYUN3HOpgCfgInqgdDAbkGGVzES1cs32JJpeqoh87SkRobGXElJx+1GZSaDqzFL+bYiX18qEcBK76mYs8uA==
 
+"@fontsource-variable/dancing-script@^5.0.16":
+  version "5.0.16"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/dancing-script/-/dancing-script-5.0.16.tgz#cb79f7e816abe760775db36547f38ee42bc6818d"
+  integrity sha512-NrjPyK6uGT2cAfgY4onzqbFeLqNOU9sBRhoAg8CYn+h3ENKTigWF8cyOUQQ5t5U5q7/NYOkWzNtTL/UdWFP9kw==
+
 "@fontsource/poppins@^5.0.8":
   version "5.0.8"
   resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-5.0.8.tgz#a1c5540aedb3719a36eba5c7c5dfaa3aed3c9f80"

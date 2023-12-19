@@ -18,7 +18,7 @@ const images = [
 const Skills = () => {
  return (
   <section className="w-full h-screen bg-main" name="skills">
-   <div className="flex flex-col items-center pt-28 sm:pt-0 sm:justify-center h-full mx-auto gap-6">
+   <div className="flex flex-col items-center pt-48 sm:pt-0 sm:justify-center h-full mx-auto gap-6">
     <div>
      <h2 className="text-4xl sm:text-5xl">Skills</h2>
      <div className="w-24 sm:w-32 h-2 mt-1 bg-red-500 rounded-full" />

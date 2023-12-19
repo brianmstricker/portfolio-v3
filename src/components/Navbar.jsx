@@ -19,8 +19,8 @@ const variants = {
 const Navbar = () => {
  const [nav, setNav] = useState(false);
  return (
-  <nav className="fixed w-full h-24 flex items-center justify-between px-4 sm:px-8 md:px-24 z-10 top-0 bg-main/95">
-   <h1 className="text-5xl font-fancy z-20 cursor-pointer">
+  <nav className="fixed w-full h-24 flex items-center justify-between px-4 sm:px-8 md:px-24 z-10 top-0 bg-main/95 backdrop-blur-sm">
+   <h1 className="text-4xl sm:text-5xl fancy z-20 cursor-pointer">
     <Link to={"home"} smooth duration={1000} onClick={() => setNav(false)}>
      Brian <span className="hidden md:inline">S</span>
     </Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
    </motion.div>
    <motion.ul
     className={
-     "absolute sm:hidden top-0 left-0 w-full h-screen flex flex-col items-center justify-center text-4xl gap-10 bg-main/95"
+     "absolute sm:hidden top-0 left-0 w-full h-screen flex flex-col items-center justify-center text-4xl gap-10 bg-main/95 z-10 backdrop-blur-sm"
     }
     animate={nav ? "open" : "closed"}
     variants={variants}
