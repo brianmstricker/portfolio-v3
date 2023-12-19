@@ -33,7 +33,7 @@ const Main = () => {
     />
     <h1 className="text-2xl sm:text-4xl mt-2">Brian Stricker</h1>
     <p className="opacity-80 text-sm sm:text-base">Full stack developer</p>
-    <div className="mt-2 md:mt-4 flex flex-col items-center">
+    <div className="mt-2 flex flex-col items-center">
      <h2 className="text-center font-bold mb-2 sm:mb-4">contact</h2>
      <ContactLinks icons={true} index={true} />
     </div>
@@ -59,7 +59,7 @@ const Main = () => {
    </div>
    <Link
     to="/home"
-    className="mt-2 sm:mt-4 lg:mt-8 absolute bottom-2 sm:static"
+    className="mt-2 sm:mt-4 lg:mt-8 static sm:absolute bottom-2 "
    >
     view full site
     <span className="relative bottom-[2px] -right-2">&rarr;</span>
