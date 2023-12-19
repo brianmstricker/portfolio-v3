@@ -24,22 +24,20 @@ const images = [
 
 const Main = () => {
  return (
-  <div className="w-full h-screen flex items-center justify-center relative -top-4 sm:-top-8">
-   <div className="flex flex-col items-center justify-center">
+  <div className="w-full h-screen flex items-center justify-center relative">
+   <div className="flex flex-col items-center justify-center relative -top-4 sm:-top-8">
     <img
      className="object-cover rounded-full w-28 h-28 sm:w-44 sm:h-44"
      src={me}
      alt="A photo of myself"
     />
     <h1 className="text-2xl sm:text-4xl mt-2">Brian Stricker</h1>
-    <p className="opacity-80 text-sm sm:text-base">
-     &middot; Full stack developer
-    </p>
+    <p className="opacity-80 text-sm sm:text-base">Full stack developer</p>
     <div className="mt-2 md:mt-4 flex flex-col items-center">
      <h2 className="text-center font-bold mb-2 sm:mb-4">contact</h2>
      <ContactLinks icons={true} index={true} />
     </div>
-    <h2 className="text-center font-bold mt-4 sm:mt-8 mb-2 sm:mb-4">skills</h2>
+    <h2 className="text-center font-bold mt-4 sm:mt-6 mb-2 sm:mb-4">skills</h2>
     <div className="grid grid-cols-3 lg:grid-cols-3 gap-x-4 gap-y-2 lg:gap-x-6 lg:gap-y-4 items-center justify-start">
      {images.map((image) => (
       <div key={`key-${image.text}`} className="group">

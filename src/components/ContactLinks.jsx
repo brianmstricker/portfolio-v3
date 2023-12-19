@@ -53,7 +53,12 @@ export const ContactLinks = ({ icons, small, index }) => {
        target="_blank"
        rel="noreferrer"
       >
-       <span className="text-xs absolute -top-4 opacity-0 group-hover:opacity-100 duration-300">
+       <span
+        className={
+         "text-xs absolute opacity-0 group-hover:opacity-100 duration-300" +
+         (index ? " -bottom-4" : " -top-4")
+        }
+       >
         {link.name}
        </span>
        <span>{link.icon}</span>
