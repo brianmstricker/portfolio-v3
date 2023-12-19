@@ -24,7 +24,7 @@ const images = [
 
 const Main = () => {
  return (
-  <div className="w-full h-screen flex items-center justify-center relative overflow-y-hidden">
+  <div className="w-full h-screen flex flex-col items-center justify-center relative overflow-y-hidden">
    <div className="flex flex-col items-center justify-center relative">
     <img
      className="object-cover rounded-full w-28 h-28 sm:w-[168px] sm:h-[168px]"
@@ -56,11 +56,14 @@ const Main = () => {
       </div>
      ))}
     </div>
-    <Link to="/home" className="mt-2 sm:mt-4 lg:mt-8">
-     view full site
-     <span className="relative bottom-[2px] -right-2">&rarr;</span>
-    </Link>
    </div>
+   <Link
+    to="/home"
+    className="mt-2 sm:mt-4 lg:mt-8 absolute bottom-2 sm:static"
+   >
+    view full site
+    <span className="relative bottom-[2px] -right-2">&rarr;</span>
+   </Link>
   </div>
  );
 };
