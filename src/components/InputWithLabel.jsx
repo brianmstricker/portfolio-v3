@@ -26,7 +26,7 @@ const InputWithLabel = ({
      onChange={onChange}
      placeholder={text}
      required={required}
-     className="bg-main rounded-md py-1.5 px-4 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-sky-500 placeholder:text-gray-400 z-10 !outline-none"
+     className="bg-main rounded-md py-1.5 px-4 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400 z-10 !outline-none"
     />
    ) : (
     <textarea
@@ -37,7 +37,7 @@ const InputWithLabel = ({
      placeholder={text}
      value={value}
      onChange={onChange}
-     className="bg-main rounded-md py-1.5 px-4 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-sky-500 placeholder:text-gray-400 z-10 !outline-none"
+     className="bg-main rounded-md py-1.5 px-4 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-blue-500 placeholder:text-gray-400 z-10 !outline-none"
     />
    )}
   </div>

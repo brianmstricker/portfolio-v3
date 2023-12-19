@@ -1,41 +1,29 @@
 import { useEffect, useState } from "react";
-import Footer from "./components/Footer";
 import Loader from "./components/Loader";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
-import About from "./sections/About";
-import Contact from "./sections/Contact";
 import Main from "./sections/Main";
-import Projects from "./sections/Projects";
-import Skills from "./sections/Skills";
-import { useScroll, motion, useSpring } from "framer-motion";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Homepage from "./sections/Homepage";
+
+const router = createBrowserRouter([
+ {
+  path: "/",
+  element: <Main />,
+ },
+ {
+  path: "home",
+  element: <Homepage />,
+ },
+]);
 
 function App() {
  const [loading, setLoading] = useState(true);
- const { scrollYProgress } = useScroll();
- const scaleX = useSpring(scrollYProgress, {
-  stiffness: 100,
-  damping: 30,
-  restDelta: 0.001,
- });
  useEffect(() => {
   setLoading(false);
  }, []);
  return (
   <>
    {loading && <Loader />}
-   <Navbar />
-   <motion.div
-    style={{ scaleX }}
-    className="fixed top-[80px] left-0 right-0 h-3 bg-sky-500 origin-[0%] z-[100]"
-   />
-   <Main />
-   <Sidebar />
-   <About />
-   <Skills />
-   <Projects />
-   <Contact />
-   <Footer />
+   <RouterProvider router={router} />
   </>
  );
 }

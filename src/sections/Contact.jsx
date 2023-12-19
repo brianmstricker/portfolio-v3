@@ -106,7 +106,7 @@ const Contact = () => {
      <button
       type="submit"
       className={
-       "px-8 py-3 border-sky-500 border rounded-md mt-4 w-fit self-center transition duration-300 ease-in-out hover:bg-sky-500 hover:drop-shadow-lg flex items-center justify-center" +
+       "px-8 py-3 bg-blue-500 border rounded-md mt-4 w-fit self-center transition duration-300 ease-in-out hover:bg-blue-600 hover:drop-shadow-lg flex items-center justify-center" +
        (submitDisabled() ? " opacity-50 cursor-not-allowed" : "")
       }
       disabled={submitDisabled()}

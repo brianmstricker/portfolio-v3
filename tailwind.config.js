@@ -8,7 +8,7 @@ export default {
     fancy: ["Dancing Script", "cursive"],
    },
    colors: {
-    main: "#070A2E",
+    main: "#262626",
    },
    screens: { xlg: "1400px" },
   },
