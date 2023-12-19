@@ -47,7 +47,7 @@ const Navbar = () => {
    </motion.div>
    <motion.ul
     className={
-     "absolute sm:hidden top-0 left-0 w-full h-screen flex flex-col items-center justify-center text-4xl gap-10 bg-main/95 z-10 backdrop-blur-sm"
+     "absolute sm:hidden top-0 left-0 w-full h-screen flex flex-col items-center justify-center text-4xl gap-10 bg-main z-10 backdrop-blur-sm"
     }
     animate={nav ? "open" : "closed"}
     variants={variants}

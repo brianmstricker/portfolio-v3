@@ -48,7 +48,7 @@ const Contact = () => {
  }
  return (
   <section
-   className="bg-main w-full min-h-screen pb-4 pt-32 sm:pt-24"
+   className="bg-main w-full min-h-screen pb-4 pt-10 sm:pt-24"
    name="contact"
   >
    <motion.div
