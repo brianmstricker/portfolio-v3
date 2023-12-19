@@ -1,12 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
  body {
-  @apply font-regular text-neutral-100 bg-neutral-800;
+  font-family: "Poppins", sans-serif;
+  @apply text-neutral-100 bg-neutral-800;
  }
 }
 

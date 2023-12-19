@@ -1,3 +1,4 @@
+import "@fontsource/poppins";
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
 import Main from "./sections/Main";

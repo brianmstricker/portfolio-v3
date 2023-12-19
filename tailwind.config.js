@@ -4,7 +4,6 @@ export default {
  theme: {
   extend: {
    fontFamily: {
-    regular: ["Geologica", "sans-serif"],
     fancy: ["Dancing Script", "cursive"],
    },
    colors: {
